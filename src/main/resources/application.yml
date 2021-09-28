@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: micronautilus
+
+r2dbc:
+  datasources:
+    default:
+      url: ${APP_DB_USER:`r2dbc:postgresql://localhost:5432/micronautilus`}
+      username: ${APP_DB_USER:micronautilus}
+      password: ${APP_DB_PASSWORD:micronautilus}
+#      schema-generate: CREATE_DROP
+      schema-generate: CREATE
+      dialect: POSTGRES
+
+riot-api:
+  url: ${RIOT_API_URL}
+  token: ${RIOT_API_TOKEN}
